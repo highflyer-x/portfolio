@@ -1,0 +1,54 @@
+$(document).ready(function(){
+    // Side nav
+    var sideNavElems = document.querySelectorAll('.sidenav');
+    var sideNavArray = M.Sidenav.init(sideNavElems);
+    
+    // Paralax
+    var paralaxElems = document.querySelectorAll('.parallax');
+    var paralaxElemsArray = M.Parallax.init(paralaxElems);
+    
+    // Resets SVG animation, then plays
+    var resetSVG = function(){
+        $('#svg_bg').removeClass('svg-bg');
+        ddr.reset().play();
+    };
+
+    $('#ddr').click(function(){
+        resetSVG();
+    });
+    // Used to log if the user has already hovered over the DDR SVG
+    var svgHasHovered = false;
+    $('#ddr').hover(function(){
+        if (svgHasHovered != true) {
+            resetSVG();
+        }
+        svgHasHovered = true;
+    });
+    document.getElementById('about').onscroll = function(){
+        resetSVG();
+    };
+
+    var ddr = new Vivus('ddr', {type: 'delayed', start: 'autostart', duration: 200}, function(){
+        // Background of SVG to white, using CSS class change
+        $('#svg_bg').addClass("svg-bg");
+    });
+
+    // Heading typing animation 
+    var typed = new Typed('#typed_name', {
+        strings: ["AS", "Arjun Singh"],
+        typeSpeed: 50
+    });
+
+    
+
+    function sendEmail() {
+        window.open('mailto:darryl.dolan@hotmail.co.uk?subject=CV/Business Enquiry');
+    };
+
+    $('#email').click(function(){
+        sendEmail();
+    });
+
+    
+    
+});

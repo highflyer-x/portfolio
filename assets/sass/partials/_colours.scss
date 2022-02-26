@@ -1,0 +1,20 @@
+/* Colour Scheme */
+
+$colour-1: #328693;
+$colour-2: #BDD5EA;
+$colour-3: #2D363F;
+/*Secondary Colour*/
+$colour-4: #315991;
+$colour-5: #F7F7FF;
+
+.colour-1{ background-color: $colour-1}
+.colour-2{ background-color: $colour-2}
+.colour-3{ background-color: $colour-3}
+.colour-4{ background-color: $colour-4}
+.colour-5{ background-color: $colour-5}
+
+.colour-1-text {color: $colour-1}
+.colour-2-text {color: $colour-2}
+.colour-3-text {color: $colour-3}
+.colour-4-text {color: $colour-4}
+.colour-5-text {color: $colour-5}

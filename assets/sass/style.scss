@@ -1,0 +1,171 @@
+@import "bourbon/bourbon";
+@import "materialize";
+@import "partials/colours.scss";
+/* Contents */
+
+/*
+- General
+- Typography
+- Navigation
+- Images, Video & Audio
+- Footer
+- Media Queries
+
+*/
+/* General
+-------------------------------*/
+.lg-divider {
+    height: 5px;
+}
+
+.contact-row {
+    margin-bottom: 40px;
+}
+
+// SVG
+svg, #ddr {
+    path {
+        stroke: #ffffff;
+        stroke-width: 1px;
+        fill: $colour-1;
+        stroke-miterlimit:10;
+        -webkit-transition: fill 1s, stroke-width .25s;
+        transition: fill 1s, stroke-width .25s;
+    }
+}
+.svg-heading {
+    padding: 100px 0 100px 0;
+}
+.svg-bg path {
+    stroke-width: 0px !important;
+    fill: #fff !important;
+}
+/* Typography
+-------------------------------*/
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Economica', sans-serif;
+    
+    color: #fff;
+}
+h3, h4, h5 {
+    font-family: 'Economica', sans-serif;
+}
+
+
+.main-heading {
+    font-family: 'Audiowide', cursive;
+}
+.sub-heading {
+    font-family: 'Open Sans', sans-serif;
+}
+.bio {
+    color: #fff;
+}
+
+footer p {
+    color: #d8d8d8;
+}
+
+/* Navigation
+-------------------------------*/
+nav {
+    background-color: $primary-color;
+}
+.ddr {
+    font-family: 'Audiowide', cursive;
+}
+a {
+    font-family: 'Economica', sans-serif;
+    color: $colour-1;
+}
+.nav-links {
+    li {display: block;}
+}
+.panel {
+    position: fixed;
+    left: -15.625em; /*left or right and the width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+
+/* Images, Video & Audio
+-------------------------------*/
+.bg-img {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.image_grid {
+    margin-top: 1%;
+}
+img {
+    max-width: 100%;
+}
+.photo {
+    border-radius: 300px;
+    border: 5px solid #fff;
+}
+/* Footer
+-------------------------------*/
+
+
+/* Media Queries
+-------------------------------*/
+
+@media only screen and (min-width: 992px)  {
+    nav .brand-logo {
+        margin-left: 10px;
+    }
+}
+
+p {
+  line-height: 2rem;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+
+  .main-heading {
+      font-size: 3em;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  .sidenav-trigger {
+      display: block;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
