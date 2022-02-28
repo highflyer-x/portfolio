@@ -28,7 +28,7 @@ $(document).ready(function(){
     
 
     function sendEmail() {
-        window.open('mailto:example@hotmail.co.uk?subject=CV/Business Enquiry');
+        window.open('mailto:2480arjunsingh@gmail.com?subject=CV/Business Enquiry');
     };
 
     $('#email').click(function(){
